@@ -126,4 +126,8 @@ USE_TZ = True
 STATIC_URL = '/static/'
 
 #para buscar archivos css y js
-SATICFILES_DIRS = (os.path.join(BASE_DIR, 'static'),)
+STATICFILES_DIRS = [os.path.join(BASE_DIR, 'static'),]
+
+
+#para el servidor de produccion
+STATIC_ROOT = os.path.join(os.path.dirname(BASE_DIR), 'static_env')

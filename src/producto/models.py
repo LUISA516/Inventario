@@ -5,8 +5,8 @@ from django.db import models
 
 # Create your models here.
 class Producto(models.Model):
-	idProducto = models.CharField(max_length=50, primary_key=True)
-	nombre = models.CharField(max_length=50)
-	precioProducto = models.IntegerField()
+	id_producto = models.CharField(max_length=50, primary_key=True)
+	nombre_producto = models.CharField(max_length=50)
+	precio_producto = models.IntegerField()
 
 	

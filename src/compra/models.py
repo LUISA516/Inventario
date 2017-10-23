@@ -7,9 +7,9 @@ from distribuidor.models import Distribuidor
 
 # Create your models here.
 class Compra(models.Model):
-	codigoCompra = models.CharField(max_length=50, primary_key=True,)
-	idProducto = models.ForeignKey(Producto, null=True, blank=True, on_delete=models.CASCADE)
-	nitProveedor = models.ForeignKey(Distribuidor, null=True, blank=True, on_delete=models.CASCADE)
+	codigo_compra = models.CharField(max_length=50, primary_key=True,)
+	id_producto = models.ForeignKey(Producto, null=True, blank=True, on_delete=models.CASCADE)
+	nit_proveedor = models.ForeignKey(Distribuidor, null=True, blank=True, on_delete=models.CASCADE)
 	cantidad = models.IntegerField()
-	valorCompra = models.IntegerField()
+	valor_compra = models.IntegerField()
 	#fecha = models.DateTimeField()#(auto_now_add=True, auto_now=False)

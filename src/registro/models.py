@@ -4,11 +4,13 @@ from __future__ import unicode_literals
 from django.db import models
 from datetime import datetime, date, time, timedelta
 import calendar
+from producto.models import Producto
 
 
 # Create your models here.
 class Registro(models.Model):
-	idRegistro = models.CharField(max_length=50)
-	nombreRegistro = models.CharField(max_length=50)
-	cantidadRegistro = models.IntegerField()
-	fechaRegistro = models.DateField()
+	id_registro = models.CharField(max_length=50)
+	id_producto = models.ForeignKey(Producto, null=True, blank=True, on_delete=models.CASCADE)
+	nombre_registro = models.CharField(max_length=50)
+	cantidad_registro = models.IntegerField()
+	fecha_registro = models.DateTimeField()

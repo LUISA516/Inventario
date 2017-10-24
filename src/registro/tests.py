@@ -8,23 +8,22 @@ from registro.models import Registro
 # Create your tests here.
 class RegistroTest(TestCase):
 	def setUp(self):
-		Registro.objects.create(idRegistro='1', nombreRegistro='montera', cantidadRegistro=2, fechaRegistro='2017-10-1')
+		Registro.objects.create(id_registro='1', nombre_registro='montera', cantidad_registro=2, fecha_registro='2017-10-22')
 
 	def test_registro_id(self):
-		registro = Registro.objects.get(idRegistro='1')
-		self.assertEqual(registro.idRegistro, '1')
+		registro = Registro.objects.get(id_registro='1')
+		self.assertEqual(registro.id_registro, '1')
 
 	def test_nombre_registro(self):
-			nombre = Registro.objects.get(nombreRegistro='montera')
-			self.assertEqual(nombre.nombreRegistro, 'montera')	
+			nombre = Registro.objects.get(nombre_registro='montera')
+			self.assertEqual(nombre.nombre_registro, 'montera')	
 
 	def test_cantidad_registro(self):
-		cantidad = Registro.objects.get(cantidadRegistro=2)
-		self.assertEqual(cantidad.cantidadRegistro, 2)
+		cantidad = Registro.objects.get(cantidad_registro=2)
+		self.assertEqual(cantidad.cantidad_registro, 2)
 
 	def test_fecha_registro(self):
-		fecha = Registro.objects.get(fechaRegistro='2017-10-1')
-		self.assertEqual(fecha.fechaRegistro,'2017-10-1')
-		print fechaRegistro
+		fecha = Registro.objects.get(fecha_registro='2017-10-22')
+		self.assertEqual(fecha.fecha_registro,'2017-10-22')
 
 			

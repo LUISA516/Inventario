@@ -7,19 +7,19 @@ from producto.models import Producto
 # Create your tests here.
 class ProductoTest(TestCase):
 	def setUp(self):
-		Producto.objects.create(idProducto='1', nombre='bota', precioVenta=12)
+		Producto.objects.create(id_producto='1', nombre_producto='bota', precio_producto=12)
 		
 
 	def test_id_producto(self):
-		idProducto = Producto.objects.get(idProducto='1')
-		self.assertEqual(idProducto.idProducto,'1')
+		id_producto = Producto.objects.get(id_producto='1')
+		self.assertEqual(id_producto.id_producto,'1')
 
 	def test_nombre(self):
-		nombre = Producto.objects.get(nombre='bota')
-		self.assertEqual(nombre.nombre, 'bota')
+		nombre = Producto.objects.get(nombre_producto='bota')
+		self.assertEqual(nombre.nombre_producto, 'bota')
 		
 
 	def test_precio_venta(self):
-		precio = Producto.objects.get(precioVenta=12)
-		self.assertEqual(precio.precioVenta, 12)
+		precio = Producto.objects.get(precio_producto=12)
+		self.assertEqual(precio.precio_producto, 12)
 		

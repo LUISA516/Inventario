@@ -14,3 +14,4 @@ class Registro(models.Model):
 	nombre_registro = models.CharField(max_length=50)
 	cantidad_registro = models.IntegerField()
 	fecha_registro = models.DateTimeField()
+	

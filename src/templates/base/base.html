@@ -1,7 +1,7 @@
 
 
 {% load staticfiles %}
-{{ form }}
+
 <!DOCTYPE html>
 <html lang="es">
   <head>
@@ -19,6 +19,10 @@
     
   </head>
   <body>
+  <form method="POST" action="">{% csrf_token %}
+  {{ form }}
+    <input type="submit" value="Registrar" />
+  </form >
     <div class="navbar navbar-default navbar-fixed-top">
       <div class="container">
         <div class="navbar-header">
@@ -39,10 +43,10 @@
               <a href="../help/">Inventario</a>
             </li>
             <li>
-              <a href="http://news.bootswatch.com">Blog</a>
+              <a href="http://news.bootswatch.com">Usuarios</a>
             </li>
             <li class="dropdown">
-              <a class="dropdown-toggle" data-toggle="dropdown" href="#" id="download">United <span class="caret"></span></a>
+              <a class="dropdown-toggle" data-toggle="dropdown" href="#" id="download"> <span class="caret"></span></a>
               
               
              

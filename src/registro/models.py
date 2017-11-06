@@ -8,6 +8,7 @@ from producto.models import Producto
 
 
 # Create your models here.
+# registro de producotos
 class Registro(models.Model):
 	id_registro = models.CharField(max_length=50)
 	id_producto = models.ForeignKey(Producto, null=True, blank=True, on_delete=models.CASCADE)

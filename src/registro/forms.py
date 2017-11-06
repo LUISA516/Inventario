@@ -4,7 +4,7 @@ from django import forms
 class RegistroForm(forms.Form):
 	Codigo = forms.CharField(max_length=100)
 	Referencia = forms.CharField(max_length=100)
-	cantidad = forms.CharField(max_length=100)
+	Cantidad = forms.CharField(max_length=100)
 	fecha_registro = forms.DateTimeField()
 
 '''
